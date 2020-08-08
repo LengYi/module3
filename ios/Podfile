@@ -1,0 +1,54 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'http://172.16.6.11:8050/Component/VVComponentSpec.git'
+
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+platform :ios, '10.0'
+use_modular_headers!
+
+target 'module3' do
+  config = use_native_modules!
+
+  use_react_native!(:path => config["reactNativePath"])
+  pod 'module3', :path => '../'
+  #pod 'SWFoundationKit', :path => '/Users/ice/Desktop/work/微微科技/Component/SWFoundationKit', :modular_headers => false
+
+  pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec', :modular_headers => false
+  pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec', :modular_headers => false
+  pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec', :modular_headers => false
+
+  target 'module3Tests' do
+    inherit! :complete
+    # Pods for testing
+  end
+
+  # Enables Flipper.
+  #
+  # Note that if you have use_frameworks! enabled, Flipper will not work and
+  # you should disable these next few lines.
+  use_flipper!
+  post_install do |installer|
+    flipper_post_install(installer)
+
+    installer.pods_project.targets.each do |target|
+        compatibilityPhase = target.build_phases.find { |ph| ph.display_name == 'Copy generated compatibility header' }
+        if compatibilityPhase
+            build_phase = target.new_shell_script_build_phase('Copy Swift Generated Header')
+            build_phase.shell_script = <<-SH.strip_heredoc
+                COMPATIBILITY_HEADER_PATH="${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h"
+                ditto "${COMPATIBILITY_HEADER_PATH}" "${PODS_ROOT}/Headers/Public/${PRODUCT_MODULE_NAME}/${PRODUCT_MODULE_NAME}-Swift.h"
+            SH
+        end
+  end
+  end
+end
+
+target 'module3-tvOS' do
+  # Pods for module3-tvOS
+
+  target 'module3-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+end
