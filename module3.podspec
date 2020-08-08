@@ -5,7 +5,7 @@
 
 Pod::Spec.new do |s|
   s.name                   = "module3"
-  s.version                = '0.1.0'
+  s.version                = '0.1.1'
   s.summary                = "module3 of React Native."
   s.homepage               = "https://github.com/LengYi/module3"
   s.author                 = "Facebook, Inc. and its affiliates"
@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
   s.exclude_files    = 'android/**/*', 'ios/**/*','node_modules/**/*'
 
   s.resource_bundle        = { "module3" => ["Release_ios/Assets/**/*.{jsbundle,json,png}"]}
-  s.dependency 'VVRNBaseModule'
+  #s.dependency 'VVRNBaseModule'
 end
