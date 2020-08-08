@@ -487,13 +487,11 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-module3/Pods-module3-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/VVRNBaseModule/VVRNBaseModule.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/module3/module3.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VVRNBaseModule.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/module3.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,13 +507,11 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-module3-module3Tests/Pods-module3-module3Tests-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/VVRNBaseModule/VVRNBaseModule.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/module3/module3.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VVRNBaseModule.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/module3.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

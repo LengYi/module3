@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
   s.exclude_files    = 'android/**/*', 'ios/**/*','node_modules/**/*'
 
   s.resource_bundle        = { "module3" => ["Release_ios/Assets/**/*.{jsbundle,json,png}"]}
-  s.dependency 'VVRNBaseModule'
+  #s.dependency 'VVRNBaseModule'
 end
