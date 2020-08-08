@@ -5,7 +5,7 @@
 
 Pod::Spec.new do |s|
   s.name                   = "module3"
-  s.version                = '0.1.0'
+  s.version                = '0.1.1'
   s.summary                = "module3 of React Native."
   s.homepage               = "https://github.com/LengYi/module3"
   s.author                 = "Facebook, Inc. and its affiliates"
