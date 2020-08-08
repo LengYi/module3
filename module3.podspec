@@ -7,10 +7,10 @@ Pod::Spec.new do |s|
   s.name                   = "module3"
   s.version                = '0.1.0'
   s.summary                = "module3 of React Native."
-  s.homepage               = "http://homepage"
+  s.homepage               = "https://github.com/LengYi/module3"
   s.author                 = "Facebook, Inc. and its affiliates"
   s.license                = { :type => 'MIT', :file => 'LICENSE'}
-  s.source                 = { :git => 'http:homepage.git', :tag => s.version.to_s}
+  s.source                 = { :git => 'git@github.com:LengYi/module3.git', :tag => s.version.to_s}
   s.platforms              = { :ios => "10.0" }
 
   s.static_framework = true

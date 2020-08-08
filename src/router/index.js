@@ -6,7 +6,13 @@ import Page2 from '../pages/page2';
 import Page3 from '../pages/page3';
 import Page4 from '../pages/page4';
 
+import Page5 from '../pages//user_1.2/page5.js';
+   
+
 const routes = {
+Page5: {
+    screen: Page5,
+  },
   Page1: {
     screen: Page1,
   },
